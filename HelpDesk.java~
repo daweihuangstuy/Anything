@@ -1,0 +1,12 @@
+public class helpDesk{
+    //this will hold the processed ticket's ID number
+    private int ticket;
+    //the Queue of tickets...
+    private ArrayPriorityQueue<Tickets>;
+
+
+
+
+
+
+}

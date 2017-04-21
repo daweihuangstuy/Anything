@@ -1,13 +1,12 @@
-import java.util.ArrayList;
-public class ArrayPriorityQueue extends Comparable<Integer> implements PriorityQueue<Ticket>{
-    
-    private ArrayList<Ticket> q;
-    public ArrayPriorityQueue(){
-	q = new ArrayList();
-    }
- 
 
-    public void add(Ticket x)
+import java.util.ArrayList;
+public class ArrayPriorityQueue<T extends Comparable<T>> implements PriorityQueue<T>{
+    
+    private ArrayList<T> q;
+    public ArrayPriorityQueue(){
+	q = new ArrayList<T>();
+    }
+     public void add(T x)
    { 
 	//initialize high, low, midpt indices
 	int lo = 0;
@@ -17,7 +16,8 @@ public class ArrayPriorityQueue extends Comparable<Integer> implements PriorityQ
 	while ( lo < hi ) { //running until target is found or bounds cross
 
 	    med = (lo + hi) / 2;
-	    int a = q.get(med).getVIPlvl().compareTo( x.getVIPlvl());
+	    int a = q.get(med).compareTo( x );
+	        
 	    if ( a == 0 ) {
 		//equal value found, insert here
 		lo = med;
@@ -34,7 +34,7 @@ public class ArrayPriorityQueue extends Comparable<Integer> implements PriorityQ
 	//System.out.println(q.size());
 	//keeps order
 	if(lo != 0){
-	    while((Integer)q.get(lo - 1).getVIPlvl().compareTo((Integer)q.get(lo).getVIPlvl()) == 0){
+	while(q.get(lo - 1).compareTo(q.get(lo)) == 0){
            lo -= 1;
         }
 	}
@@ -52,33 +52,30 @@ public class ArrayPriorityQueue extends Comparable<Integer> implements PriorityQ
     }
 
     //Returns the smallest item in the PQ from the front
-    public Ticket peekMin(){
+    public T peekMin(){
 	return q.get(0);
     }
 
     //Removes and returns the smallest item from the front
-    public Ticket removeMin(){
-	Ticket old = peekMin();
+    public T removeMin(){
+	T old = peekMin();
 	q.remove(0);
 	return old;
     }
     public String toString(){
-	for (int i = q.size(); i >= 0; i--){
-	    System.out.println( q.get(i).getID() + " --> ");
-	}
+	return q.toString();
     }
-    
     public static void main(String[] args){
-	ArrayPriorityQueue a = new ArrayPriorityQueue();
-	Ticket alpha = new Ticket(209853738, 0);
-	Ticket beta = new Ticket(1234, 15);
-	Ticket king = new Ticket(999, 0);
+	ArrayPriorityQueue<Integer> a = new ArrayPriorityQueue<Integer>();
+	a.add(1);
+	a.add(3);
+	a.add(2);
+	a.add(4);
+	a.add(1);
+	a.add(3);
+	a.removeMin();
+	System.out.println(a);
 
-	a.add(beta);
-	System.out.println(a);
-	a.add(alpha);
-	System.out.println(a);
-	a.add(king);
     }
     
 
