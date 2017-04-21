@@ -1,4 +1,4 @@
-public class Ticket extends Comparable{
+public class Ticket{
     private int ID;
     private Integer VIPlvl;
     private boolean solved;

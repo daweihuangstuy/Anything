@@ -1,6 +1,6 @@
 public class Ticket extends Comparable{
     private int ID;
-    private int VIPlvl;
+    private Integer VIPlvl;
     private boolean solved;
     private String solution;
 
@@ -17,7 +17,7 @@ public class Ticket extends Comparable{
     }
     
     //0 is the largest.
-    public int getVIPlvl(){
+    public Integer getVIPlvl(){
 	return VIPlvl;
     }
 

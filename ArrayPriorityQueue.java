@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-public class ArrayPriorityQueue extends Comparable<Integer> implements PriorityQueue<Ticket>{
+public class ArrayPriorityQueue implements Comparable,PriorityQueue<Ticket>{
     
     private ArrayList<Ticket> q;
     public ArrayPriorityQueue(){
