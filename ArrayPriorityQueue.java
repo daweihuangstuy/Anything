@@ -1,11 +1,11 @@
 import java.util.ArrayList;
-public class ArrayPriorityQueue implements Comparable,PriorityQueue<Ticket>{
+public class ArrayPriorityQueue implements PriorityQueue<Ticket>{
     
     private ArrayList<Ticket> q;
     public ArrayPriorityQueue(){
 	q = new ArrayList();
-    }
- 
+    }    
+    
 
     public void add(Ticket x)
    { 
@@ -17,7 +17,7 @@ public class ArrayPriorityQueue implements Comparable,PriorityQueue<Ticket>{
 	while ( lo < hi ) { //running until target is found or bounds cross
 
 	    med = (lo + hi) / 2;
-	    int a = q.get(med).getVIPlvl().compareTo( x.getVIPlvl());
+	    int a = q.get(med).compareTo(x);
 	    if ( a == 0 ) {
 		//equal value found, insert here
 		lo = med;
@@ -34,9 +34,9 @@ public class ArrayPriorityQueue implements Comparable,PriorityQueue<Ticket>{
 	//System.out.println(q.size());
 	//keeps order
 	if(lo != 0){
-	    while((Integer)q.get(lo - 1).getVIPlvl().compareTo((Integer)q.get(lo).getVIPlvl()) == 0){
+	    while(q.get(lo - 1).compareTo(q.get(lo)) == 0){
            lo -= 1;
-        }
+	    }
 	}
        
 	// If you made it this far, newVal is not present.
@@ -63,9 +63,11 @@ public class ArrayPriorityQueue implements Comparable,PriorityQueue<Ticket>{
 	return old;
     }
     public String toString(){
-	for (int i = q.size(); i >= 0; i--){
-	    System.out.println( q.get(i).getID() + " --> ");
+	String ret = "";
+	for (int i = q.size() - 1; i >= 0; i--){
+	    ret += q.get(i).getID() + " --> ";
 	}
+    return ret;
     }
     
     public static void main(String[] args){
@@ -79,6 +81,7 @@ public class ArrayPriorityQueue implements Comparable,PriorityQueue<Ticket>{
 	a.add(alpha);
 	System.out.println(a);
 	a.add(king);
+	System.out.println(a);
     }
     
 

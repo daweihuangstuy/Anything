@@ -1,4 +1,4 @@
-public class Ticket{
+public class Ticket implements Comparable<Ticket>{
     private int ID;
     private Integer VIPlvl;
     private boolean solved;
@@ -29,5 +29,16 @@ public class Ticket{
     public void setSolution(String s){
     solution = s;
     }
+
+    public int compareTo(Ticket T){
+
+        if (this.getVIPlvl() == T.getVIPlvl()) { return 0; }
+        else if (this.getVIPlvl() > T.getVIPlvl()){ return 1;}
+        else { return -1; }
+    }
+
+
+
+    
 
 }
