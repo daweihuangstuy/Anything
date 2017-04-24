@@ -1,6 +1,9 @@
 # Anything
 Help Desk lab03 Dawei Huang Karina Ionkina
-w
+<h3>Intefaces</h3>
+1) Comparable
+2) PriorityQueue
+
 <h3>Class Ticket implements Comparable</h3>
 1) Ticket(int id, int vip)
 //accessor
@@ -13,7 +16,7 @@ w
                            - returns 1 if ticket T has a lower vip level as this ticket
                            - returns -1 if ticket T has a greater vip level as this ticket
 
-Class ArrayPriorityQueue
+<h3>Class ArrayPriorityQueue</h3>
 1) void add(Ticket x) - adds ticket to the queue of tickets organized by the binary search/place algorithm
 2) boolean isEmpty() - returns true if the queue is empty, return false otherwise
 3) Ticket peekMin() - returns the next ticket on the queue
