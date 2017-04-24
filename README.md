@@ -1,7 +1,7 @@
 # Anything
 Help Desk lab03 Dawei Huang Karina Ionkina
 <h3>Intefaces</h3>
-1) Comparable
+1) Comparable \n
 2) PriorityQueue
 
 <h3>Class Ticket implements Comparable</h3>
