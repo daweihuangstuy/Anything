@@ -1,7 +1,7 @@
-# Anythingewwww
+# Anything
 Help Desk lab03 Dawei Huang Karina Ionkina
 w
-<h1>Class Ticket implements Comparable</h1>w
+<h3>Class Ticket implements Comparable</h3>
 1) Ticket(int id, int vip)
 //accessor
 2) int getID() - returns ticket ID
