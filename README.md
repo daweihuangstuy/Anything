@@ -30,6 +30,7 @@
 3. String toString() -  returns a string representation of the Ticket queue
 
 //mutator
+
 4. void add(Ticket x) - adds ticket to the queue of tickets organized by the binary search/place 5. 
 5. Ticket removeMin() - removes and returns the next ticket on the queue
 
