@@ -1,5 +1,5 @@
 # Anything
-# Roster: Dawei Huang and Karina Ionkina
+## Roster: Dawei Huang and Karina Ionkina
 
 ## Intefaces
 1. Comparable
@@ -37,6 +37,6 @@
 ## Class HelpDesk
 1. HelpDesk() - sets the next ticket to be processed as the ticket at the front of the queue
 
-##Further Embellishments
+## Further Embellishments
 1. The use of a binary search algorithm to order the ticket queue according to priority
 2. The priority of a ticket is determined by the vip level of that ticket
