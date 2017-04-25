@@ -68,6 +68,10 @@ public class ArrayPriorityQueue implements PriorityQueue<Ticket>{
         return old;
     }
    
+	//returns the size of the ticket queue
+	public int size(){
+		return _data.size();
+	}
 
     public String toString(){
         String ret = " FRONT ... ";
