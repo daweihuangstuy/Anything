@@ -27,7 +27,8 @@
 
 1. boolean isEmpty() - returns true if the queue is empty, return false otherwise
 2. Ticket peekMin() - returns the next ticket on the queue
-3. String toString() -  returns a string representation of the Ticket queue
+3. int size() - returns the size of the Ticket queue
+4. String toString() -  returns a string representation of the Ticket queue
 
 //mutator
 
